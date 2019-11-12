@@ -23,8 +23,11 @@ public class UserPrincipal implements UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 	
-		return Collections.singleton(new SimpleGrantedAuthority("USER"));
+		if (user.getUsername().equals("navin")) {
+			return Collections.singleton(new SimpleGrantedAuthority("USER"));	
+		}
 		
+		return Collections.singleton(new SimpleGrantedAuthority("ADMIN"));
 	
 	}
 

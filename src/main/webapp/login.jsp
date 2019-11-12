@@ -94,7 +94,7 @@
    <div class="form-group">
    <c:url value="/login" var="loginProcessingUrl"/>
      
- <form action="${loginProcessingUrl}" method="post">
+ <form action="${loginProcessingUrl}" method="post"> 
     <fieldset>
         <legend>Please Login</legend>
         <!-- use param.error assuming FormLoginConfigurer#failureUrl contains the query parameter error -->
@@ -130,7 +130,7 @@
         </div>
          </div>
     </fieldset>
- </form>
+</form>
   
 </div>
 
