@@ -13,9 +13,9 @@ public class UserPrincipal implements UserDetails {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private User user;
+	private Users user;
 	
-	public UserPrincipal(User user) {
+	public UserPrincipal(Users user) {
 		super();
 		this.user = user;
 	}
@@ -43,7 +43,7 @@ public class UserPrincipal implements UserDetails {
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
