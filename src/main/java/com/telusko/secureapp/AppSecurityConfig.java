@@ -54,8 +54,6 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
           .and()
           .rememberMe()
           .tokenValiditySeconds(365*24*60*60)
-          .and()
-          .logout()
-          .permitAll();
+          .and().csrf().disable();
     }
 }
