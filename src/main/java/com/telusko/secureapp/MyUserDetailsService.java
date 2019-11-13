@@ -14,9 +14,10 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		
+			
 		Users user = repo.findByUsername(username);
-		if(user==null)
+		
+			if(user==null)
 			throw new UsernameNotFoundException("User 404");
 		
 		return new UserPrincipal(user);
