@@ -10,7 +10,15 @@ public class Users
 	private Integer id;
 	private String username;
 	private String password;
-	public long getId() {
+	private String role;
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public int getId() {
 		return id;
 	}
 	public void setId(Integer id) {
