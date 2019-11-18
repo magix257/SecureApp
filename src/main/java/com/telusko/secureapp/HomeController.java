@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController
 {
 	@PreAuthorize("hasAuthority('ADMIN')")
-	//@Secured("ADMIN")
 	@RequestMapping("/")
 	public String home()
 	{

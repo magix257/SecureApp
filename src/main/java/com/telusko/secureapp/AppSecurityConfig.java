@@ -29,23 +29,11 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 	return provider;
 	}
 	
-	//NoOpPasswordEncoder.getInstance()
-//	@SuppressWarnings("deprecation")
-//	@Bean
-//	@Override
-//	protected UserDetailsService userDetailsService() {
-//	
-//		
-//		List<UserDetails> users = new ArrayList<>();
-//		users.add(User.withDefaultPasswordEncoder().username("navin").password("1234").roles("USER").build());
-//		
-//		return new InMemoryUserDetailsManager(users);
-//	}
+
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
           .authorizeRequests()
-          //.antMatchers("/home.jsp").access("hasRole('ROLE_ADMIN')")
           .anyRequest()
           .authenticated()
           .and()
